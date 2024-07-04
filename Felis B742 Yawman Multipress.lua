@@ -1,8 +1,8 @@
 --[[
- Felis B742 mapping for the Yawman Arrow. By Ryan Mikulovsky, 2024.
+ Felis B742 mapping for the Yawman Arrow By Ryan Mikulovsky, CC0 1.0.
  
  Inspired by Yawman's mapping for the MSFS PMDG 777.
- Thanks for Thomas Nield for suggesting looking into Lua for better controller support in XP12. 
+ Thanks for Thomas Nield for suggesting looking into Lua for better controller support in XP12. Button numbers and variable names came from Thomas.
  
  See Thomas' video and access example Lua scripts at https://www.youtube.com/watch?v=x8SMg33RRQ4
 ]]
