@@ -1,5 +1,5 @@
 # Requirements
-* X-Plane 12 because I'm not testing this in X-Plane 11
+* [X-Plane 12](https://www.x-plane.com/) because I'm not testing this in X-Plane 11
 * [Felis 747-200 for X-Plane 12](https://store.x-plane.org/Boeing-747-200-Classic_p_1491.html)
 * [FlyWithLua 2.8 for X-Plane 12](https://forums.x-plane.org/index.php?/files/file/82888-flywithlua-ng-next-generation-plus-edition-for-x-plane-12-win-lin-mac/)
 * [Yawman Arrow Controller](https://yawmanflight.com/)
