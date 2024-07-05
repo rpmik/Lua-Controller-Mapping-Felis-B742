@@ -1,5 +1,5 @@
 # Requirements
-* [X-Plane 12](https://www.x-plane.com/) because I'm not testing this in X-Plane 11
+* [X-Plane 12](https://www.x-plane.com/) as I'm not testing this in X-Plane 11
 * [Felis 747-200 for X-Plane 12](https://store.x-plane.org/Boeing-747-200-Classic_p_1491.html)
 * [FlyWithLua 2.8 for X-Plane 12](https://forums.x-plane.org/index.php?/files/file/82888-flywithlua-ng-next-generation-plus-edition-for-x-plane-12-win-lin-mac/)
 * [Yawman Arrow Controller](https://yawmanflight.com/)
@@ -12,7 +12,7 @@ Save to /X-Plane 12/Resources/plugins/FlyWithLua/Scripts
 For now, you'll need to read the script to understand what buttons operate. Assignments closely matches Yawman's PMDG 777 mappings. See their [discord](https://discord.gg/dcpTc5KP).
 
 # Assignments
-Sixpack 1, 2, 3, 4, 5, and 6 are referred to as SP1, SP2, SP3 etc. 
+Sixpack 1, 2, 3, 4, 5, and 6 are referred to as SP1, SP2, SP3 etc. These are the two rows of three buttons, where the upper-most left button is 1 and the lower-most right button is 6.
 
 Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3), MF 2L (SP4), MF 2C (SP5), MF 2R (SP6)
 
