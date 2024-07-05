@@ -5,6 +5,8 @@
  Thanks for Thomas Nield for suggesting looking into Lua for better controller support in XP12. Button numbers and variable names came from Thomas.
  
  See Thomas' video and access example Lua scripts at https://www.youtube.com/watch?v=x8SMg33RRQ4
+ 
+ Repository at https://github.com/rpmik/Lua-Controller-Mapping-Felis-B742
 ]]
 -- use local to prevent other unknown Lua scripts from overwriting variables (or vice versa)
 local STICK_X = 0 
