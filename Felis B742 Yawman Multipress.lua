@@ -263,7 +263,9 @@ function multipress_buttons()
     end 
 end
 
-clear_all_button_assignments()
+-- Don't mess with other configurations
+if PLANE_ICAO == "B742" then 
+	clear_all_button_assignments()
 
 --[[
 set_axis_assignment(STICK_X, "roll", "normal" )
@@ -273,5 +275,5 @@ set_axis_assignment(POLE_RIGHT, "speedbrakes", "reverse")
 set_axis_assignment(RUDDER, "yaw", "normal" )
 ]]
 
-
-do_every_frame("multipress_buttons()")
+	do_every_frame("multipress_buttons()")
+end
