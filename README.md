@@ -9,7 +9,7 @@ Note that the current script does not modify your axes. You'll need to set up yo
 
 Save _Felis B742 Yawman Multipress.lua_ to /X-Plane 12/Resources/plugins/FlyWithLua/Scripts
 
-For now, you'll need to read the script to understand what buttons operate. Assignments closely matches Yawman's PMDG 777 mappings. See their [discord](https://discord.gg/dcpTc5KP).
+Assignments closely matches Yawman's PMDG 777 mappings. See their [discord](https://discord.gg/dcpTc5KP).
 
 # Assignments
 Sixpack 1, 2, 3, 4, 5, and 6 are referred to as SP1, SP2, SP3 etc. These are the two rows of three buttons, where the upper-most left button is 1 and the lower-most right button is 6.
