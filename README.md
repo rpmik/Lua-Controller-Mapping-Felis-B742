@@ -18,7 +18,7 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 
 * DPAD Left = Zoom Out
 * DPAD Right = Zoom In
-* DPAD Center = Chase or Pilot's Chair
+* DPAD Center = Chase or Aircraft's Default View
 
 * Sixpack #2 (SP2) = brakes regular hold
 
