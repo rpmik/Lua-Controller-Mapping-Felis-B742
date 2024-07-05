@@ -3,22 +3,25 @@ Note that the current script does not modify your axes. You'll need to set up yo
 
 Save to /X-Plane 12/Resources/plugins/FlyWithLua/Scripts
 
-For now, you'll need to read the script to understand what buttons operate. I'll add mapping details at a later date. But it closely matches Yawman's PMDG 777 mappings. See their [discord](https://discord.gg/dcpTc5KP).
+For now, you'll need to read the script to understand what buttons operate. Assignments closely matches Yawman's PMDG 777 mappings. See their [discord](https://discord.gg/dcpTc5KP).
 
 # Assignments
+Sixpack 1, 2, 3, 4, 5, and 6 are referred to as SP1, SP2, SP3 etc. 
 
-DPAD Left is Zoom Out
-DPAD Right is Zoom In
-DPAD Center is Chase or Pilot's Chair
+Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3), MF 2L (SP4), MF 2C (SP5), MF 2R (SP6)
 
-Sixpack #2 (SP2) is brakes regular hold
+* DPAD Left = Zoom Out
+* DPAD Right = Zoom In
+* DPAD Center = Chase or Pilot's Chair
 
-POV Up is Pitch Trim Up
-POV Dow is Pitch Trim Down		
-POV Left is Glance Left
-POV Right is Glance Right
+* Sixpack #2 (SP2) = brakes regular hold
 
-Right Bumper is Auto Pilot Command or Off
+* POV Up = Pitch Trim Up
+* POV Dow = Pitch Trim Down		
+* POV Left = Glance Left
+* POV Right = Glance Right
+
+* Right Bumper = Auto Pilot Command or Off
 
 * SP1 plus
 	* DPAD Up = AT Speed Up
