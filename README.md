@@ -52,6 +52,12 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 	* Right Bumper = AP VS Pitch Mode
 * LEFT Bumper plus
 	* Wheel Up/Down = Brakes Max (Parking Brake)
+	* SP1 = View, Glareshield
+	* SP2 = View, Radios; Radar; EPR
+	* SP3 = Nav computer
+	* SP4 = Overhead panel
+	* SP5 = Flight Engineer, Upper Panels
+	* SP6 = Flight Engineer, Lower Panels
 * DPAD Up plus
 	* Wheel Up = Flaps Up
 	* Wheel Down = Flaps Down
