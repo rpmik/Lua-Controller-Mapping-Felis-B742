@@ -59,7 +59,8 @@ function multipress_buttons()
 			set_button_assignment(DPAD_RIGHT,"sim/general/zoom_in_fast")
 			set_button_assignment(WHEEL_UP, "sim/none/none")
 			set_button_assignment(WHEEL_DOWN, "sim/none/none")
-			set_button_assignment(LEFT_BUMPER, "sim/none/none")
+			set_button_assignment(LEFT_BUMPER, "sim/none/none") -- multifunction
+			set_button_assignment(RIGHT_BUMPER, "sim/none/none") -- multifunction
 			set_button_assignment(SIXPACK_1,"sim/none/none")
 			set_button_assignment(SIXPACK_2,"sim/flight_controls/brakes_regular")
 			set_button_assignment(SIXPACK_3,"sim/none/none")		
