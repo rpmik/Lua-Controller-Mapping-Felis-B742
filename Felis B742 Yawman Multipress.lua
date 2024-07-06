@@ -121,7 +121,8 @@ function multipress_buttons()
 			end
 		
 			if AP_ENGAGED == 2 then
-				command_once("sim/autopilot/servos_fdir_off") -- Turn it all off
+				command_once("B742/command/AP_A_engage_down") -- Manual Mode
+				command_once("B742/command/AP_A_engage_down") -- Off
 			end
 
 			STILL_PRESSED = true
