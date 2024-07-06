@@ -42,7 +42,6 @@ local DPAD_RIGHT = 24
 local PAUSE_STATE = false
 local STILL_PRESSED = false -- track presses for everything
 local MULTI_SIXPACK_PRESSED = false -- track presses for only the six pack where there's multiple six pack buttons involved
-local DPAD_PRESSED = false
 
 local CHASE_VIEW = false
 
@@ -294,12 +293,9 @@ function multipress_buttons()
 			if dpad_left_pressed then
 				-- Pilot's seat
 				set_pilots_head(-0.497226,5.741722,-26.197409,0.0,-12.625139)
-
 			elseif dpad_right_pressed then
 				-- Copilot's seat
 				set_pilots_head(0.541737,5.741722,-26.197409,0.0,-12.625139)
-
-
 			end
 			STILL_PRESSED = true
 
