@@ -118,9 +118,7 @@ function multipress_buttons()
 				-- No one ever goes into just Manual mode, right? So skip straight to Command mode.
 				command_once("B742/command/AP_A_engage_up") -- Manual Mode
 				command_once("B742/command/AP_A_engage_up") -- Command Mode
-			end
-		
-			if AP_ENGAGED == 2 then
+			elseif AP_ENGAGED == 2 then
 				command_once("B742/command/AP_A_engage_down") -- Manual Mode
 				command_once("B742/command/AP_A_engage_down") -- Off
 			end
