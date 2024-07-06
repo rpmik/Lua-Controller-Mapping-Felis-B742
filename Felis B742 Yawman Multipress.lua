@@ -42,6 +42,7 @@ local DPAD_RIGHT = 24
 local PAUSE_STATE = false
 local STILL_PRESSED = false -- track presses for everything
 local MULTI_SIXPACK_PRESSED = false -- track presses for only the six pack where there's multiple six pack buttons involved
+local DPAD_PRESSED = false
 
 local CHASE_VIEW = false
 
@@ -93,6 +94,8 @@ function multipress_buttons()
 		dpad_up_pressed = button(DPAD_UP)
 		dpad_center_pressed = button(DPAD_CENTER)
 		dpad_down_pressed = button(DPAD_DOWN)
+		dpad_left_pressed = button(DPAD_LEFT)
+		dpad_right_pressed = button(DPAD_RIGHT)
 		
 		--need to figure out how to do nothing for duration of buttons being pressed
 
@@ -296,6 +299,7 @@ function multipress_buttons()
 				-- Copilot's seat
 				set_pilots_head(0.541737,5.741722,-26.197409,0.0,-12.625139)
 
+
 			end
 			STILL_PRESSED = true
 
@@ -309,6 +313,10 @@ function multipress_buttons()
 		if not sp1_pressed and not sp2_pressed and not sp3_pressed and not sp4_pressed and not sp5_pressed and not sp6_pressed then
 			MULTI_SIXPACK_PRESSED = false
 		end 
+		
+		if not dpad_up_pressed and not dpad_left_pressed and not dpad_right_pressed and not dpad_down_pressed then
+			DPAD_PRESSED = false
+		end
 
     end 
 end
