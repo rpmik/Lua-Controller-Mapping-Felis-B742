@@ -4,6 +4,8 @@
 * [FlyWithLua 2.8 for X-Plane 12](https://forums.x-plane.org/index.php?/files/file/82888-flywithlua-ng-next-generation-plus-edition-for-x-plane-12-win-lin-mac/)
 * [Yawman Arrow Controller](https://yawmanflight.com/)
 
+* Also [see the script for the Flight Factor 777-200 V.2](https://github.com/rpmik/Lua-Yawman-Control-Flight-Factor-B772)
+
 # Installation
 Note that the current script does not modify your axes. You'll need to set up your Yawman Arrow's axes as you like.
 
