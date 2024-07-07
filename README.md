@@ -73,4 +73,4 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 
 # TODO
 * Implement radio tuning
-* Implement cockpit views
+* ~~Implement cockpit views~~
