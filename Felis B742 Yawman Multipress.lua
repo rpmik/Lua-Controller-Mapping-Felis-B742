@@ -45,7 +45,7 @@ local MULTI_SIXPACK_PRESSED = false -- track presses for only the six pack where
 
 local CHASE_VIEW = false
 
-function multipressB742_buttons() 
+function multipressFelisB742_buttons() 
     -- if aircraft is Boeing 747-200 then procede
     if PLANE_ICAO == "B742" then 
                 
@@ -329,5 +329,5 @@ set_axis_assignment(POLE_RIGHT, "speedbrakes", "reverse")
 set_axis_assignment(RUDDER, "yaw", "normal" )
 ]]
 
-	do_every_frame("multipressB742_buttons()")
+	do_every_frame("multipressFelisB742_buttons()")
 end
