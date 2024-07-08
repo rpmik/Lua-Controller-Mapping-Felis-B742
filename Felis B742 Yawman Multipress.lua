@@ -278,8 +278,8 @@ function multipressFelisB742_buttons()
 		if dpad_up_pressed then
 			if not STILL_PRESSED then
 				set_button_assignment(RIGHT_BUMPER,"B742/command/AT_on_off") -- there's only a toggle (Will investigate later)
-				set_button_assignment(WHEEL_UP,"sim/flight_controls/flaps_up")
-				set_button_assignment(WHEEL_DOWN,"sim/flight_controls/flaps_down")
+				set_button_assignment(WHEEL_UP,"sim/flight_controls/flaps_down")
+				set_button_assignment(WHEEL_DOWN,"sim/flight_controls/flaps_up")
 				set_button_assignment(POV_LEFT,"sim/view/glance_left")
 				set_button_assignment(POV_RIGHT,"sim/view/glance_right")
 				set_button_assignment(POV_UP,"sim/view/straight_up")
