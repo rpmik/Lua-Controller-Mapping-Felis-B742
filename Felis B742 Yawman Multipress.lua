@@ -196,17 +196,23 @@ function multipressFelisB742_buttons()
 				DataRef("Inbd_Right","B742/ext_light/landing_inbd_R_sw","writable")
 				DataRef("Outbd_Left","B742/ext_light/landing_outbd_L_sw","writable")
 				DataRef("Outbd_Right","B742/ext_light/landing_outbd_R_sw","writable")
+				DataRef("Turnoff_Left","B742/ext_light/runway_turnoff_L_sw","writable")
+				DataRef("Turnoff_Right","B742/ext_light/runway_turnoff_R_sw","writable")
 
 				if Inbd_Left == 0 and Outbd_Left == 0 then
 					Inbd_Left = 1
 					Inbd_Right = 1
 					Outbd_Left = 1
 					Outbd_Right = 1
+					Turnoff_Left = 1
+					Turnoff_Right = 1
 				elseif Inbd_Left == 1 and Outbd_Left == 1 then
 					Inbd_Left = 0
 					Inbd_Right = 0
 					Outbd_Left = 0
 					Outbd_Right = 0
+					Turnoff_Left = 0
+					Turnoff_Right = 0
 				end
 				MULTI_SIXPACK_PRESSED = true
 			else
