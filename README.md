@@ -47,7 +47,7 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 	* DPAD Down = AP Alt Select Down
 	* Right Bumper = AP Alt Sel
 	* Left Bumper = AP Alt Hold
-	* SP6 = Landing Lights Toggle
+	* SP6 = Landing Lights Toggles and Turnoff Lights Toggles
 * SP6 plus
 	* DPAD Up = VS Down
 	* DPAD Down = VS Up
