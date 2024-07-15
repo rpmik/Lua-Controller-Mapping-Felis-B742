@@ -25,7 +25,7 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 * Sixpack #2 (SP2) = brakes regular hold
 
 * POV Up = Pitch Trim Up
-* POV Dow = Pitch Trim Down		
+* POV Down = Pitch Trim Down		
 * POV Left = Glance Left
 * POV Right = Glance Right
 
