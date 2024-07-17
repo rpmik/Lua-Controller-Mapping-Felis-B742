@@ -1,4 +1,6 @@
 * Also [see the script for the Flight Factor 777-200 V.2](https://github.com/rpmik/Lua-Yawman-Control-Flight-Factor-B772)
+* Also see [the script for the XCrafts E175 (XPlane 12)](https://github.com/rpmik/Lua-Yawman-Control-XCrafts-E175)
+
 
 # Requirements
 * [X-Plane 12](https://www.x-plane.com/) as I'm not testing this in X-Plane 11
