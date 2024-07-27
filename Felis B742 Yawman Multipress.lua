@@ -45,6 +45,15 @@ local MULTI_SIXPACK_PRESSED = false -- track presses for only the six pack where
 
 local CHASE_VIEW = false
 
+local FRAME_COUNT = 0.0
+local GoFasterFrameRate = 0.0
+local PauseIncrementFrameCount = 0.0
+local FrameRate = 0.0
+local CurFrame = 0.0
+
+local NoCommand = " sim/none/none "
+
+
 function multipressFelisB742_buttons() 
     -- if aircraft is Boeing 747-200 then procede
     if PLANE_ICAO == "B742" then 
@@ -53,20 +62,20 @@ function multipressFelisB742_buttons()
 
 		-- Base Config buttons that should almost always get reassigned except during a press
         if not STILL_PRESSED then -- avoid overwriting assignments during other activity
-			set_button_assignment(DPAD_UP,"sim/none/none")
-			set_button_assignment(DPAD_DOWN,"sim/none/none")
+			set_button_assignment(DPAD_UP,NoCommand)
+			set_button_assignment(DPAD_DOWN,NoCommand)
 			set_button_assignment(DPAD_LEFT,"sim/general/zoom_out_fast")
 			set_button_assignment(DPAD_RIGHT,"sim/general/zoom_in_fast")
-			set_button_assignment(WHEEL_UP, "sim/none/none")
-			set_button_assignment(WHEEL_DOWN, "sim/none/none")
-			set_button_assignment(LEFT_BUMPER, "sim/none/none") -- multifunction
-			set_button_assignment(RIGHT_BUMPER, "sim/none/none") -- multifunction
-			set_button_assignment(SIXPACK_1,"sim/none/none")
+			set_button_assignment(WHEEL_UP, NoCommand)
+			set_button_assignment(WHEEL_DOWN, NoCommand)
+			set_button_assignment(LEFT_BUMPER, NoCommand) -- multifunction
+			set_button_assignment(RIGHT_BUMPER, NoCommand) -- multifunction
+			set_button_assignment(SIXPACK_1,NoCommand)
 			set_button_assignment(SIXPACK_2,"sim/flight_controls/brakes_regular")
-			set_button_assignment(SIXPACK_3,"sim/none/none")		
-			set_button_assignment(SIXPACK_4,"sim/none/none")
-			set_button_assignment(SIXPACK_5,"sim/none/none")
-			set_button_assignment(SIXPACK_6,"sim/none/none")			
+			set_button_assignment(SIXPACK_3,NoCommand)		
+			set_button_assignment(SIXPACK_4,NoCommand)
+			set_button_assignment(SIXPACK_5,NoCommand)
+			set_button_assignment(SIXPACK_6,NoCommand)			
 			set_button_assignment(POV_UP,"sim/flight_controls/pitch_trim_up")
 			set_button_assignment(POV_DOWN,"sim/flight_controls/pitch_trim_down")
 			set_button_assignment(POV_LEFT,"sim/view/glance_left")
@@ -240,7 +249,7 @@ function multipressFelisB742_buttons()
 
 -- parking brake			
 		if left_bumper_pressed then
-			set_button_assignment(SIXPACK_2,"sim/none/none")
+			set_button_assignment(SIXPACK_2,NoCommand)
 			if not STILL_PRESSED then
 				set_button_assignment(WHEEL_UP,"sim/flight_controls/brakes_toggle_max")
 				set_button_assignment(WHEEL_DOWN,"sim/flight_controls/brakes_toggle_max")
@@ -292,8 +301,8 @@ function multipressFelisB742_buttons()
 				set_button_assignment(POV_UP,"sim/view/straight_up")
 				set_button_assignment(POV_DOWN,"sim/view/straight_down")
 		
-				set_button_assignment(DPAD_LEFT,"sim/none/none")
-				set_button_assignment(DPAD_RIGHT,"sim/none/none")
+				set_button_assignment(DPAD_LEFT,NoCommand)
+				set_button_assignment(DPAD_RIGHT,NoCommand)
 			end
 			
 			-- logic is off, does not work, gotta fix this...
@@ -322,6 +331,40 @@ function multipressFelisB742_buttons()
 		end
 
     end 
+end
+
+-- If aircraft's interactive Command increment is not continuous or continuous and too fast, use framerate to meter incrementing
+function meterB742Interaction(boolButtonPressed, strCommandName1, strCommandName2, floatSeconds, floatIntervalSpeed)
+		-- floatIntervalSpeed -- generally, higher is slower. 
+		
+		-- Set metering based on current frame rate
+		DataRef("FrameRatePeriod","sim/operation/misc/frame_rate_period","writable")
+		CurFrame = FRAME_COUNT
+		
+		if not boolButtonPressed then
+			FrameRate = 1/FrameRatePeriod
+			-- Roughly calculate how many frames to wait before incrementing based on floatSeconds
+			GoFasterFrameRate = (floatSeconds * FrameRate) + CurFrame -- start five seconds of slow increments
+		end
+
+		if CurFrame < GoFasterFrameRate then
+			if not boolButtonPressed then
+				command_once(strCommandName1)
+				-- calculate frame to wait until continuing
+				-- if floatSeconds is 2 then we'll wait around 1 second before continuing so as to allow a single standalone increment
+				PauseIncrementFrameCount = ((floatSeconds/2) * FrameRate) + CurFrame
+			else
+				-- wait a beat with PauseIncrementFrameCount then continue
+				if (CurFrame > PauseIncrementFrameCount) and (CurFrame % floatIntervalSpeed) == 0 then
+					command_once(strCommandName1)
+				end
+			end
+		elseif CurFrame >= GoFasterFrameRate and boolButtonPressed then
+			-- If current frame is divisible by five then issue a command -- helps to delay the command in a regular interval
+			if (CurFrame % floatIntervalSpeed) == 0 then
+				command_once(strCommandName2)
+			end
+		end			
 end
 
 -- Don't mess with other configurations
