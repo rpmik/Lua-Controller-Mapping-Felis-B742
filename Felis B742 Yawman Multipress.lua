@@ -51,7 +51,7 @@ local PauseIncrementFrameCount = 0.0
 local FrameRate = 0.0
 local CurFrame = 0.0
 
-local NoCommand = " sim/none/none "
+local NoCommand = "sim/none/none"
 
 
 function multipressFelisB742_buttons() 
@@ -64,6 +64,7 @@ function multipressFelisB742_buttons()
         if not STILL_PRESSED then -- avoid overwriting assignments during other activity
 			set_button_assignment(DPAD_UP,NoCommand)
 			set_button_assignment(DPAD_DOWN,NoCommand)
+			set_button_assignment(DPAD_CENTER,NoCommand)
 			set_button_assignment(DPAD_LEFT,"sim/general/zoom_out_fast")
 			set_button_assignment(DPAD_RIGHT,"sim/general/zoom_in_fast")
 			set_button_assignment(WHEEL_UP, NoCommand)
@@ -240,6 +241,9 @@ function multipressFelisB742_buttons()
 		
 		if sp6_pressed then
 			if not STILL_PRESSED then
+				set_button_assignment(DPAD_LEFT,"sim/instruments/barometer_down")
+				set_button_assignment(DPAD_RIGHT,"sim/instruments/barometer_up")
+				set_button_assignment(DPAD_CENTER,"sim/instruments/barometer_std")
 				set_button_assignment(DPAD_UP,"B742/command/AP_VS_DOWN")
 				set_button_assignment(DPAD_DOWN,"B742/command/AP_VS_UP")
 				set_button_assignment(RIGHT_BUMPER,"B742/command/AP_pitch_mode_VS")
