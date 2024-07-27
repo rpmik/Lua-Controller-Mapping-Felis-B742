@@ -108,6 +108,9 @@ function multipressFelisB742_buttons()
 		dpad_left_pressed = button(DPAD_LEFT)
 		dpad_right_pressed = button(DPAD_RIGHT)
 		
+		wheel_up_pressed = button(WHEEL_UP)
+		wheel_down_pressed = button(WHEEL_DOWN)
+		
 		--need to figure out how to do nothing for duration of buttons being pressed
 
 -- Start expanded control logic
@@ -258,9 +261,15 @@ function multipressFelisB742_buttons()
 		if left_bumper_pressed then
 			set_button_assignment(SIXPACK_2,NoCommand)
 			if not STILL_PRESSED then
-				set_button_assignment(WHEEL_UP,"sim/flight_controls/brakes_toggle_max")
-				set_button_assignment(WHEEL_DOWN,"sim/flight_controls/brakes_toggle_max")
+				--set_button_assignment(WHEEL_UP,"sim/flight_controls/brakes_toggle_max")
+				--set_button_assignment(WHEEL_DOWN,"sim/flight_controls/brakes_toggle_max")
 			end
+			
+			if wheel_up_pressed or wheel_down_pressed then
+				meterB742Interaction(BUMPERS_PRESSED, "sim/flight_controls/brakes_toggle_max", "sim/flight_controls/brakes_toggle_max", 1.0, 2.0) -- at around two seconds, use larger increment
+				BUMPERS_PRESSED = true
+			end
+			
 				-- Cockpit camera height not implemented as it deals with the rudder axes.....
 			if sp1_pressed and not MULTI_SIXPACK_PRESSED then
 				if dpad_up_pressed then
@@ -301,8 +310,8 @@ function multipressFelisB742_buttons()
 		if dpad_up_pressed then
 			if not STILL_PRESSED then
 				set_button_assignment(RIGHT_BUMPER,"B742/command/AT_on_off") -- there's only a toggle (Will investigate later)
-				set_button_assignment(WHEEL_UP,"sim/flight_controls/flaps_down")
-				set_button_assignment(WHEEL_DOWN,"sim/flight_controls/flaps_up")
+				--set_button_assignment(WHEEL_UP,"sim/flight_controls/flaps_down")
+				--set_button_assignment(WHEEL_DOWN,"sim/flight_controls/flaps_up")
 				set_button_assignment(POV_LEFT,"sim/view/glance_left")
 				set_button_assignment(POV_RIGHT,"sim/view/glance_right")
 				set_button_assignment(POV_UP,"sim/view/straight_up")
@@ -312,6 +321,13 @@ function multipressFelisB742_buttons()
 				set_button_assignment(DPAD_RIGHT,NoCommand)
 			end
 			
+			if wheel_up_pressed then
+				meterB742Interaction(DPAD_PRESSED, "sim/flight_controls/flaps_down", "sim/flight_controls/flaps_down", 1.0, 1) -- at around two seconds, use larger increment
+				DPAD_PRESSED = true
+			elseif wheel_down_pressed then
+				meterB742Interaction(DPAD_PRESSED, "sim/flight_controls/flaps_up", "sim/flight_controls/flaps_up", 1.0, 1) -- at around two seconds, use larger increment
+				DPAD_PRESSED = true
+			end
 			-- logic is off, does not work, gotta fix this...
 			if dpad_left_pressed then
 				-- Pilot's seat
