@@ -42,6 +42,8 @@ local DPAD_RIGHT = 24
 local PAUSE_STATE = false
 local STILL_PRESSED = false -- track presses for everything
 local MULTI_SIXPACK_PRESSED = false -- track presses for only the six pack where there's multiple six pack buttons involved
+local DPAD_PRESSED = false
+local BUMPERS_PRESSED = false
 
 local CHASE_VIEW = false
 
@@ -248,6 +250,7 @@ function multipressFelisB742_buttons()
 				set_button_assignment(DPAD_DOWN,"B742/command/AP_VS_UP")
 				set_button_assignment(RIGHT_BUMPER,"B742/command/AP_pitch_mode_VS")
 			end
+
 			STILL_PRESSED = true
 		end
 
@@ -332,6 +335,10 @@ function multipressFelisB742_buttons()
 		
 		if not dpad_up_pressed and not dpad_left_pressed and not dpad_right_pressed and not dpad_down_pressed then
 			DPAD_PRESSED = false
+		end
+
+		if not left_bumper_pressed and not right_bumper_pressed then
+			BUMPERS_PRESSED = false
 		end
 
     end 
