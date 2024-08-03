@@ -5,7 +5,7 @@
 * [Yawman Arrow Controller](https://yawmanflight.com/)
 
 # Installation
-Note that the current script does not modify your axes. You'll need to set up your Yawman Arrow's axes as you like.
+**Note that the current script does not modify your axes.** You'll need to set up your Yawman Arrow's axes as you like.
 
 Save _Felis B742 Yawman Multipress.lua_ to /X-Plane 12/Resources/plugins/FlyWithLua/Scripts
 
