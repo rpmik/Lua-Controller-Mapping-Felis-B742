@@ -52,6 +52,8 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 	* Left Bumper = AP Alt Hold
 	* SP6 = Landing Lights Toggles and Turnoff Lights Toggles
 * SP6 plus
+	* DPAD Left = Captain's Barometer Down
+	* DPAD Right = Captain's Barometer Up
 	* DPAD Up = VS Down
 	* DPAD Down = VS Up
 	* Right Bumper = AP VS Pitch Mode
