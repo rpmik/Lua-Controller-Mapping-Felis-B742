@@ -43,6 +43,7 @@ Some Yawman documentation refer to these as MF 1L (SP1), MF 1C (SP2), MF 1R (SP3
 	* DPAD Down = AP Nav Land
 	* DPAD Left = AP Nav Hdg
 	* DPAD Right = AP Nav ILS
+	* Right Bumper = AP Nav INS
 	* SP5 = Red Flash Light
 * SP3 plus
 	* DPAD Up = AP Alt Select Up
