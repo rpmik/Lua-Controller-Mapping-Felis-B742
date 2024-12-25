@@ -1,3 +1,7 @@
+# More Aircraft Scripts for the Yawman Arrow Controller
+* [Full and Most Up To Date Aircraft Script List](https://www.distortions.net/yawman-arrow-controller-xplane/#:~:text=All%20the%20Scripts%20(Github%20Downloads)) (at distortions.net)
+
+
 # Requirements
 * [X-Plane 12](https://www.x-plane.com/) as I'm not testing this in X-Plane 11
 * [Felis 747-200 for X-Plane 12](https://store.x-plane.org/Boeing-747-200-Classic_p_1491.html)
